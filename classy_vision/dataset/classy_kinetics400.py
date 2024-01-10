@@ -8,7 +8,7 @@ import os
 from typing import Any, Callable, Dict, List, Optional
 
 import torch
-from torchvision.datasets.kinetics import Kinetics400
+from torchvision.datasets.kinetics import Kinetics
 
 from . import register_dataset
 from .classy_video_dataset import ClassyVideoDataset
@@ -91,7 +91,7 @@ class Kinetics400Dataset(ClassyVideoDataset):
                 metadata_filepath, video_dir=video_dir, update_file_path=True
             )
 
-        dataset = Kinetics400(
+        dataset = Kinetics(
             video_dir,
             frames_per_clip,
             step_between_clips=step_between_clips,
